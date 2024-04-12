@@ -27,15 +27,12 @@
     <script>
         function converter(){
             temp = Number(window.prompt('Digite uma temperautra em ºC (Celsius)'))
-            var msg = document.getElementById('msg')
             msg.innerHTML = `A temperatura de ${temp}ºC, corresponde a...`
-            msg.style.fontSize = '40px'
-            msg.style.fontWeight = 'bolder'
-
+            msg.style.font = 'Bolder 40px Arial'
+            // Calculos
             kel = temp + 273,15
             fah = (temp * 9/5) + 32
-
-            var resultado = document.getElementById('resultado')
+            // Exibição dos resultados
             resultado.innerHTML += 
             `<p>${kel}ºK (Kelvin)</p>
             <p>${fah}ºF (Fahrenheit)</p>`
