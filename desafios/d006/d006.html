@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 006</title>
+    <style>
+        body {
+            font: normal 18pt Arial;
+        }
+
+        input {
+            width: 150px;
+            height: 100px;
+            font-size: 1.5rem;
+        }
+    </style>
+
+</head>
+<body>
+    <h1>Conversor de Temperaturas</h1>
+    <input type="button" value="Converter" onclick="converter()">
+    <div id="resultado">
+        <p id="msg">Clique no botão para iniciar.</p>
+    </div>
+
+    <script>
+        function converter(){
+            temp = Number(window.prompt('Digite uma temperautra em ºC (Celsius)'))
+            var msg = document.getElementById('msg')
+            msg.innerHTML = `A temperatura de ${temp}ºC, corresponde a...`
+            msg.style.fontSize = '40px'
+            msg.style.fontWeight = 'bolder'
+
+            kel = temp + 273,15
+            fah = (temp * 9/5) + 32
+
+            var resultado = document.getElementById('resultado')
+            resultado.innerHTML += 
+            `<p>${kel}ºK (Kelvin)</p>
+            <p>${fah}ºF (Fahrenheit)</p>`
+        }
+    </script>
+</body>
+</html>
