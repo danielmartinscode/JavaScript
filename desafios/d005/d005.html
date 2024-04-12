@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 005</title>
+    <style>
+        body {
+            font: normal 18pt Arial;
+        }
+
+        input {
+            width: 150px;
+            height: 100px;
+            font-size: 1.5rem;
+        }
+    </style>
+</head>
+<body>
+    <h1>Conversor de Medidas</h1>
+    <input type="button" value="Converter" onclick="converter()">
+    <div id="resultados">
+        <p id="msg">Clique no botão para iniciar.</p>
+    </div>
+
+    <script>
+        function converter(){
+            dist = Number(window.prompt('Digite uma distância em metros (m)'))
+            var msg = document.getElementById('msg')
+            msg.innerHTML = `A distância de ${dist} metros, corresponde a...`
+            msg.style.fontSize = '40px'
+            msg.style.fontWeight = 'bolder'
+
+            km = (dist / 1000)
+            hm = (dist / 100)
+            dam = (dist / 10)
+            dm = (dist * 10)
+            cm = (dist * 100)
+            mm = (dist * 1000)
+
+            var resultados = document.getElementById('resultados')
+            resultados.innerHTML += `
+            <p>${km} quilômetros (Km). </p> 
+            <p>${hm} hectômetros (Hm) </p>
+            <p>${dam} decâmetros (Dam)</p>
+            <p>${dm} decimetros (dm)</p>
+            <p>${cm} centímetros (cm)</p>
+            <p>${mm} milímetros (mm)</p>`
+
+        }
+    </script>
+</body>
+</html>

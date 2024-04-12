@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 003</title>
+    <style>
+        body {
+            font: Normal 18pt Arial;
+        }
+
+        input{
+            width: 250px;
+            height: 100px;
+            font-size: 1.3rem;
+        }
+    </style>
+</head>
+<body>
+    <h1>Antes e depois</h1>
+    <input type="button" value="Antecessor e Sucessor" onclick="inicio()">
+
+    <script>
+        function inicio() {
+            num = Number( window.prompt('Digite um número inteiro qualquer'))
+            ant = (num - 1)
+            suc = (num + 1)
+            window.alert (`Antes de ${num}, temos o número ${ant}.\nDepois de ${num}, temos o número ${suc}.`)
+
+        }
+    </script>
+</body>
+</html>
