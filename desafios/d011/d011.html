@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 011</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 1rem;
+        }
+
+        h1{
+            font-size: 3rem;
+        }
+
+        input{
+            width: 150px;
+            height: 100px;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        #res{
+            font-weight: bold;
+            font-size: 1rem;
+        }
+
+        #red {
+            background-color: red;
+            color: rgb(71, 5, 5);
+            font-weight: bolder;
+        }
+
+        span#x {
+            color: red;
+        }
+
+        mark#green{
+            background-color: greenyellow;
+            color: green;
+            font-weight: bolder;
+        }
+
+        span#v{
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Ano Bissexto</h1>
+    </header>
+    <main>
+        <div>
+            <input type="button" value="Verificar" onclick="verificar()">
+            <p id="msg" >Informe um ano para saber se ele é bissexto.</p>
+        </div>
+        <div id="res"></div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
