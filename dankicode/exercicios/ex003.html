@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Dinamica</title>
+</head>
+<body>
+    <script>
+        // Aplicação Calculadora Dinamica
+        // - Queremos um número incial
+        // - Queremos um sinal (tipo de operação)
+        // - Queremos um número final
+
+        var numeroInicial = prompt('Informe o primeiro número...')
+
+        var sinal = prompt('Informe o sinal da operação...')
+        while (sinal != '+' && sinal !='-' && sinal != '/' && sinal != '*'){
+            alert('Informe uma operação válida (+ , - , / ou *)')
+            sinal = prompt('Informe o sinal da operação...')
+        }
+
+        var numeroFinal = prompt('Informe o número final')
+
+        // Conversão da String para número inteiro
+
+        numeroInicial = parseInt(numeroInicial)
+        numeroFinal = parseInt(numeroFinal)
+
+        var resultadoFinal = 0
+        if (sinal == '+'){
+            resultadoFinal = numeroInicial + numeroFinal
+        } else if(sinal == '-'){
+            resultadoFinal = numeroInicial - numeroFinal
+        } else if(sinal == '/'){
+            resultadoFinal = numeroInicial / numeroFinal
+        } else {
+            resultadoFinal = numeroInicial * numeroFinal
+        }
+
+        alert('O resultado final é '+ resultadoFinal)
+
+    </script>
+</body>
+</html>
